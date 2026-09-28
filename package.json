@@ -1,0 +1,13 @@
+{
+  "name": "serverest-api-tests",
+  "version": "1.0.0",
+  "description": "Automated API tests for ServeRest using Postman and Newman",
+  "private": true,
+  "scripts": {
+    "test:api": "newman run postman/collections/serverest.postman_collection.json -e postman/environments/serverest.environment.json --reporters cli,htmlextra,junit --reporter-htmlextra-export reports/api-report.html --reporter-junit-export reports/api-results.xml"
+  },
+  "devDependencies": {
+    "newman": "^6.2.1",
+    "newman-reporter-htmlextra": "^1.23.1"
+  }
+}
